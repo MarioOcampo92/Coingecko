@@ -2,21 +2,24 @@ import { useState, useEffect } from "react";
 import React  from 'react';
 
 
-function Coins () {
+function CoinName () {
 
-    const [coinName, setCoinName ] = useState ([]);
-    // const [priceCoin, setPriceCoin ] = useState ([]);
-    // const [imgCoin, setImgCoin ] = useState ([]);
+    const [coinName, setCoinName ] = useState ([]);   
+    
 
-    const fetchCoin = () => {
+    const fetchCoinName = () => {
         fetch("https://api.coingecko.com/api/v3/coins/")
             .then(res => res.json())
-            .then(data => setCoinName(data[0].name))
+            .then(data => setCoinName(data[1].name))
     }
-    console.log(coinName)
+    
+  
+    // console.log(coinName)
+    
 
     useEffect(() =>{
-        fetchCoin()
+        fetchCoinName()
+        
     },[]);
     return(
         <div>
@@ -29,7 +32,7 @@ function Coins () {
 
 
 
-export default Coins
+export default CoinName
 
 
 
