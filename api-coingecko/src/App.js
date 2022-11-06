@@ -1,19 +1,19 @@
 
 import './App.css';
-import Coins from './Components/Coins';
+import CoinName from './Components/CoinName';
+import CoinImg from './Components/CoinImg';
+import CoinPrice from './Components/CoinPrice'
 
 
 function App() {
   return (
     <div className="App">
-      <div>
-      
         
-        <Coins/>
+        <CoinName/>
 
- 
-        
-              </div>
+        <CoinImg/>  
+
+        <CoinPrice/>
     
     </div>
   );
